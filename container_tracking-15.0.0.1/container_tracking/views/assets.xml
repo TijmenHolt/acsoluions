@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--
+          <template id="assets_backend" name="event assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/container_tracking/static/src/js/attachment_viewer.js"/>
+                <link rel="stylesheet" href="/container_tracking/static/src/scss/menu_kb_style.scss"/>
+            </xpath>
+        </template>
+        
+        -->
+        
+
+ 
+</odoo>
+

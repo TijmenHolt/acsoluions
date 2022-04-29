@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_picking_form_folder_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit.folder</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='date_deadline']" position="after">
+                <field name="show_update_container" invisible="1"/>
+                <label for="folder_id"/>
+                <div class="o_row">
+                    <field name="folder_id" invisible="0"/>
+                    <button name="update_line_container" type="object"
+                            string=" Update Container Qty"
+                            class="btn-link mb-1 px-0" icon="fa-refresh"
+                            attrs="{'invisible': ['|',('show_update_container', '=', False),('state', '!=', 'assigned')]}"/>
+                </div>
+            </xpath>
+
+            <xpath expr="//page[@name='detailed_operations']//button[@name='action_put_in_pack']"
+                   position="after">
+                <button class="oe_highlight"
+                        name="action_put_in_container"
+                        type="object"
+                        string="Put in Container"
+                        attrs="{'invisible': [('state', 'in', ('draft', 'done', 'cancel'))]}"
+                />
+            </xpath>
+
+            <xpath expr="//page[@name='operations']//button[@name='action_put_in_pack']"
+                   position="after">
+                <button class="oe_highlight"
+                        name="action_put_in_container"
+                        type="object"
+                        string="Put in Container"
+                        attrs="{'invisible': [('state', 'in', ('draft', 'done', 'cancel'))]}"
+                />
+            </xpath>
+
+
+        </field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <!--kanban-->
+    <record id="res_transport_kanban_view" model="ir.ui.view">
+        <field name="name">res.transport.kanban</field>
+        <field name="model">res.transport</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+
+            <kanban default_group_by="stage_id" class="o_kanban_card_header" sample="1" create="false" delete="false"
+                    group_create="false">
+                <field name="name"/>
+                <field name="create_uid"/>
+                <field name="reference"/>
+                <field name="transport_type"/>
+                <field name="message_needaction_counter"/>
+                <field name="color"/>
+                <field name="arrival"/>
+                <field name="product_ids"/>
+                <field name="stage_id" options='{"group_by_tooltip": {"name": "Description"}}'/>
+                <field name="activity_state"/>
+                <field name="activity_ids"/>
+                <progressbar field="activity_state" colors='{"planned": "success", "today": "warning", "overdue": "danger"}'/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="#{!selection_mode ? kanban_color(record.color.raw_value) : ''} oe_kanban_global_click">
+                            <div class="o_dropdown_kanban dropdown">
+                                <a class="dropdown-toggle o-no-caret btn"
+                                   role="button" data-toggle="dropdown"
+                                   data-display="static" href="#"
+                                   aria-label="Dropdown menu" title="Dropdown menu">
+                                    <span class="fa fa-ellipsis-v"/>
+                                </a>
+                                <div class="dropdown-menu" role="menu">
+                                    <t t-if="widget.editable">
+                                        <a role="menuitem" type="edit" class="dropdown-item">Edit</a>
+                                    </t>
+                                    <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                </div>
+                            </div>
+                            <div class="oe_kanban_content">
+                                <div class="o_kanban_record_title">
+                                    <strong>
+                                        [<field name="reference"/>]
+                                        <field name="name"/>
+                                    </strong>
+                                </div>
+
+                                <div class="o_dropdown_kanban dropdown" groups="base.group_user">
+                                    <a role="button" class="dropdown-toggle o-no-caret btn" data-toggle="dropdown"
+                                       data-display="static" href="#" aria-label="Dropdown menu" title="Dropdown menu">
+                                        <span class="fa fa-ellipsis-v"/>
+                                    </a>
+                                    <div class="dropdown-menu" role="menu">
+                                        <a t-if="widget.editable" role="menuitem" type="edit" class="dropdown-item">Edit
+                                        </a>
+                                        <div role="separator" class="dropdown-divider"/>
+                                        <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="o_kanban_record_body">
+                                <div class="oe_kanban_bottom_left">
+                                    Arrival:
+                                    <field name="arrival"/>
+                                </div>
+                            </div>
+
+                            <div class="o_kanban_record_bottom">
+                                <div class="oe_kanban_bottom_left">
+                                    <span class="fa fa-ship" t-if="record.transport_type.raw_value == 'ship'"
+                                          title="Boat"/>
+                                    <span class="fa fa-truck" t-if="record.transport_type.raw_value == 'truck'"
+                                          title="Truck"/>
+                                    <span class="fa fa-plane" t-if="record.transport_type.raw_value == 'plane'"
+                                          title="Plane"/>
+                                    <span class="fa fa-train" t-if="record.transport_type.raw_value == 'train'"
+                                          title="Train"/>
+                                    <field name="activity_ids" widget="kanban_activity"/>
+                                    <t t-if="record.message_needaction_counter.raw_value">
+                                        <span role="alert" class="oe_kanban_mail_new" title="Unread Messages">
+                                            <i class="fa fa-comments" role="img" aria-label="Unread Messages"/>
+                                            <t t-raw="record.message_needaction_counter.raw_value"/>
+                                        </span>
+                                    </t>
+                                </div>
+
+                                <div class="oe_kanban_bottom_right">
+                                    <img t-att-src="kanban_image('res.users', 'image_small', record.create_uid.raw_value)"
+                                         t-att-title="record.create_uid.value" t-att-alt="record.create_uid.value"
+                                         width="24"
+                                         height="24" class="oe_kanban_avatar"/>
+                                </div>
+                            </div>
+
+                            <div class="oe_clear"/>
+                        </div>
+                    </t>
+                </templates>
+
+            </kanban>
+
+        </field>
+    </record>
+
+
+    <record id="res_transport_tree_view" model="ir.ui.view">
+        <field name="name">res.transport.tree</field>
+        <field name="model">res.transport</field>
+        <field name="arch" type="xml">
+
+            <tree string="Transport" create="false" delete="false">
+                <field name="name"/>
+                <field name="transport_type"/>
+                <field name="reference"/>
+                <field name="departure"/>
+                <field name="arrival"/>
+                <field name="active" invisible="1"/>
+                <field name="product_ids" invisible="1"/>
+
+            </tree>
+
+        </field>
+    </record>
+
+    <record id="res_transport_form_view" model="ir.ui.view">
+        <field name="name">res.transport.form</field>
+        <field name="model">res.transport</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <form string="Transport" create="false" delete="false">
+                <header>
+                    <field name="stage_id" widget="statusbar"
+                           options="{'clickable': '1', 'fold_field': 'fold'}"/>
+                </header>
+
+                <sheet>
+
+                    <div class="oe_button_box" name="button_box" groups="base.group_user">
+                        <button class="oe_stat_button" type="object"
+                                name="action_view_container" icon="fa-tasks">
+                                 <field string="Containers" name="container_count" widget="statinfo"
+                                   options="{'label_field': 'label_container'}"/>
+                        </button>
+                    </div>
+
+                    <field name="id"
+                           invisible="True"
+                    />
+                    <div class="oe_title">
+                        <label class="oe_edit_only"
+                               for="name"
+                               string="Transport Name"
+                        />
+                        <h1>
+                            <field name="name"
+                                   placeholder="Transport Name"
+                            />
+                        </h1>
+                    </div>
+
+                    <field name="active"
+                           invisible="1"
+                    />
+
+                    <group>
+                        <group>
+                            <field name="transport_type" readonly="1" force_save="1"/>
+                            <field name="reference" required="True"/>
+                        </group>
+                        <group>
+                            <label for="departure" string="Dates"/>
+                            <div class="o_row">
+                                <field name="departure" widget="daterange" options="{'related_end_date': 'arrival'}"/>
+                                <span>to</span>
+                                <field name="arrival" widget="daterange"
+                                       options="{'related_start_date': 'departure'}"/>
+                            </div>
+                        </group>
+
+                    </group>
+
+                    <notebook>
+
+                        <page string="Containers"
+                              name="containers"
+                        >
+                            <field name="container_ids">
+
+                                <kanban class="o_kanban" create="false" delete="false" edit="false">
+                                    <field name="name"/>
+                                    <field name="container_id"/>
+                                    <field name="color"/>
+                                    <field name="transport_type"/>
+                                    <templates>
+                                        <t t-name="kanban-box">
+                                            <div style="background-color: #9E588B;">
+                                                <div class="oe_kanban_content">
+                                                    <div class="o_kanban_record_title">
+                                                        <strong>
+                                                            <field name="name"/>
+                                                        </strong>
+                                                    </div>
+                                                </div>
+
+                                                <div class="oe_kanban_details">
+                                                    <div class="o_kanban_record_title">
+                                                        Folder:
+                                                        <field name="transport_type"/>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </t>
+                                    </templates>
+                                </kanban>
+                            </field>
+                        </page>
+                        <page string="Products"
+                              name="products"
+                        >
+                            <group>
+                                <field name="product_ids" widget="many2many_tags"/>
+                            </group>
+
+                        </page>
+                    </notebook>
+                </sheet>
+
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+
+            </form>
+        </field>
+    </record>
+
+
+    <record id="view_res_transport_filter" model="ir.ui.view">
+        <field name="name">res.transport.search</field>
+        <field name="model">res.transport</field>
+        <field name="arch" type="xml">
+
+            <search string="Search">
+                <field name="name"/>
+                <field name="partner_id" operator="child_of" string="Supplier"/>
+                <field name="container_ids"/>
+                <field name="folder_id"/>
+                <field name="arrival"/>
+                <field name="product_ids"/>
+
+                <separator/>
+                <filter name="active" string="Active" domain="[('active','=',True)]" help="Show active"/>
+                <filter name="inactive" string="Inactive" domain="[('active','=',False)]" help="Show inactive"/>
+                <group string="Group By">
+                    <filter string="Company" name="company" domain="[]" context="{'group_by':'company_id'}"
+                            groups="base.group_multi_company"/>
+                    <filter string="Folder" name="folder_id" domain="[]"
+                            context="{'group_by':'folder_id'}"/>
+                    <filter string="Partner" name="partner_id" domain="[]"
+                            context="{'group_by':'partner_id'}"/>
+                </group>
+            </search>
+
+        </field>
+    </record>
+
+
+    <record id="view_res_transport_calendar" model="ir.ui.view">
+        <field name="name">res.transport.calendar</field>
+        <field name="model">res.transport</field>
+        <field name="arch" type="xml">
+            <calendar string="Transport" date_start="arrival" color="partner_id">
+                <field name="name"/>
+                <field name="partner_id"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="res_transport_boat_action" model="ir.actions.act_window">
+        <field name="name">Boats</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.transport</field>
+        <field name="view_mode">kanban,tree,form,calendar,pivot</field>
+        <field name="view_id" ref="res_transport_kanban_view"/>
+        <field name="context">{'transport_type':'ship'}</field>
+        <field name="domain">[('transport_type' ,'=', 'ship')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Transport
+            </p>
+        </field>
+    </record>
+
+    <record id="res_transport_plane_action" model="ir.actions.act_window">
+        <field name="name">Airplanes</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.transport</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_id" ref="res_transport_kanban_view"/>
+        <field name="context">{'transport_type':'plane'}</field>
+        <field name="domain">[('transport_type' ,'=', 'plane')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Transport
+            </p>
+        </field>
+    </record>
+    <record id="res_transport_truck_action" model="ir.actions.act_window">
+        <field name="name">Trucks</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.transport</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_id" ref="res_transport_kanban_view"/>
+        <field name="context">{'transport_type':'truck'}</field>
+        <field name="domain">[('transport_type' ,'=', 'truck')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Transport
+            </p>
+        </field>
+    </record>
+
+    <record id="res_transport_train_action" model="ir.actions.act_window">
+        <field name="name">Trains</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.transport</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_id" ref="res_transport_kanban_view"/>
+        <field name="context">{'transport_type':'train'}</field>
+        <field name="domain">[('transport_type' ,'=', 'train')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Transport
+            </p>
+        </field>
+    </record>
+
+
+</odoo>

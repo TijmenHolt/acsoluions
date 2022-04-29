@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Sequences for res.container.folder -->
+        <record id="seq_res_container_folder" model="ir.sequence">
+            <field name="name">Container folder</field>
+            <field name="code">res.container.folder</field>
+            <field name="prefix">F/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Sequences for res.transport -->
+        <record id="seq_res_transport" model="ir.sequence">
+            <field name="name">Transport</field>
+            <field name="code">res.transport</field>
+            <field name="prefix">T/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        
+    </data>
+</odoo>

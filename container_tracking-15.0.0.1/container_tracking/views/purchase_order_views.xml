@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="purchase_action_quotations_new" model="ir.actions.act_window">
+        <field name="name">Quotation</field>
+        <field name="res_model">purchase.order</field>
+        <field name="view_mode">form,tree,kanban,pivot,graph,calendar,activity</field>
+        <field name="domain">[('folder_id', '=', active_id)]</field>
+        <field name="context">{'search_default_folder_id': active_id, 'default_folder_id': active_id}</field>
+    </record>
+
+    <record id="purchase_view_inherit" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit.purchase</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="folder_id" groups="base.group_no_one"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="purchase_order_view_tree_inherit" model="ir.ui.view">
+        <field name="name">purchase.order.tree.inherit.purchase</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="folder_id"/>
+            </xpath>
+
+        </field>
+    </record>
+
+
+</odoo>

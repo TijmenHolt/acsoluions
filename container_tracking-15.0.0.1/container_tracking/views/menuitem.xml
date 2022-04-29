@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem name="Containers"
+                  id="container_root"
+                  sequence="100"
+                  web_icon="container_tracking,static/description/icon.png"
+        />
+        <!--Configuration-->
+        <menuitem name="Configuration"
+                  id="container_config"
+                  sequence="50"
+                  parent="container_root"
+        />
+        <menuitem id="container_configuration"
+                  name="Container"
+                  action="container_tracking.res_container_action"
+                  parent="container_config"
+                  sequence="2"/>
+
+        <menuitem id="container_type_configuration"
+                  name="Container Type"
+                  action="container_tracking.res_container_type_action"
+                  parent="container_config"
+                  sequence="10"/>
+
+        <!--Folder-->
+        <menuitem id="folder_configuration"
+                  name="Folder Configuration"
+                  parent="container_config"
+                  sequence="15"/>
+
+        <menuitem id="folder_check_list_configuration"
+                  name="Folder Checklist"
+                  action="container_tracking.action_folder_checklist"
+                  parent="folder_configuration"
+                  sequence="10"/>
+
+        <menuitem id="folder_stage_configuration"
+                  name="Folder Stages"
+                  action="container_tracking.folder_stage_action"
+                  parent="folder_configuration"
+                  sequence="15"/>
+
+        <menuitem id="container_task_type_configuration"
+                  name="Stages"
+                  action="container_tracking.container_task_type"
+                  parent="container_config"
+                  sequence="20"/>
+
+        <!--Container-->
+        <menuitem name="Folders"
+                  id="folder_menu"
+                  sequence="5"
+                  parent="container_root"
+        />
+
+        <!--Container-->
+        <menuitem id="container_supplier"
+                  action="account.res_partner_action_supplier"
+                  parent="folder_menu"
+                  sequence="50"/>
+
+
+        <!--Folder-->
+        <menuitem id="container_folder"
+                  action="container_tracking.res_container_folder"
+                  parent="folder_menu"
+                  sequence="10"/>
+
+
+        <!-- This menu is display in Container app when purchase is installed-->
+        <menuitem
+                id="purchase_order_menu_quotations_crm"
+                name="My Quotations"
+                action="purchase.purchase_rfq"
+                parent="folder_menu"
+                sequence="20"/>
+
+        <!--Container-->
+        <menuitem name="Transports"
+                  id="transport_menu"
+                  sequence="5"
+                  parent="container_root"
+        />
+        <menuitem name="Containers"
+                  id="container_menu"
+                  parent="container_root"
+                  sequence="8"
+        />
+        <menuitem id="container_boat_menu"
+                  action="container_tracking.res_container_task_boat_action"
+                  parent="container_menu"
+                  sequence="2"/>
+
+        <menuitem id="container_plane_menu"
+                  action="container_tracking.res_container_task_plane_action"
+                  parent="container_menu"
+                  sequence="4"/>
+
+        <menuitem id="container_train_menu"
+                  action="container_tracking.res_container_task_train_action"
+                  parent="container_menu"
+                  sequence="6"/>
+
+        <menuitem id="container_truck_menu"
+                  action="container_tracking.res_container_task_truck_action"
+                  parent="container_menu"
+                  sequence="8"/>
+
+        <!--Transport-->
+        <menuitem id="transport_boat_menu"
+                  action="container_tracking.res_transport_boat_action"
+                  parent="transport_menu"
+                  sequence="2"/>
+
+        <menuitem id="transport_plane_menu"
+                  action="container_tracking.res_transport_plane_action"
+                  parent="transport_menu"
+                  sequence="4"/>
+
+        <menuitem id="transport_train_menu"
+                  action="container_tracking.res_transport_train_action"
+                  parent="transport_menu"
+                  sequence="6"/>
+
+        <menuitem id="transport_truck_menu"
+                  action="container_tracking.res_transport_truck_action"
+                  parent="transport_menu"
+                  sequence="8"/>
+
+
+    </data>
+</odoo>

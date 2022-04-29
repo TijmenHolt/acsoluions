@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+
+        <record id="dry_storage_type" model="res.container.type">
+            <field name="name">Dry</field>
+        </record>
+        <record id="flat_rack_type" model="res.container.type">
+            <field name="name">Flat rack</field>
+        </record>
+        <record id="open_top_type" model="res.container.type">
+            <field name="name">Open top</field>
+        </record>
+        <record id="tunnel_type" model="res.container.type">
+            <field name="name">Tunnel</field>
+        </record>
+        <record id="open_side_storage_type" model="res.container.type">
+            <field name="name">Open side</field>
+        </record>
+        <record id="double_doors_type" model="res.container.type">
+            <field name="name">Double doors</field>
+        </record>
+        <record id="insulated_type" model="res.container.type">
+            <field name="name">Insulated</field>
+        </record>
+        <record id="tanks_type" model="res.container.type">
+            <field name="name">Tanks</field>
+        </record>
+        <record id="half_height_type" model="res.container.type">
+            <field name="name">Half height</field>
+        </record>
+        <record id="intermediate_type" model="res.container.type">
+            <field name="name">Intermediate</field>
+        </record>
+        <record id="drums_type" model="res.container.type">
+            <field name="name">Drums</field>
+        </record>
+
+        <record id="swap_bodies_type" model="res.container.type">
+            <field name="name">Swap bodies</field>
+        </record>
+
+
+        <!-- Containers Dry-->
+        <record id="container_01" model="res.container">
+            <field name="name">Dry storage container</field>
+            <field name="description">The most commonly used shipping containers; they come in various dimensions
+                standardized by ISO.
+            </field>
+            <field name="type_id" ref="dry_storage_type"/>
+            <field name="size">10</field>
+            <field name="uom_id" ref="uom.product_uom_foot"/>
+            <field name="image_1920" type="base64" file="container_tracking/static/img/dry_storage_container.jpeg"/>
+        </record>
+
+        <record id="container_02" model="res.container">
+            <field name="name">Dry storage container</field>
+            <field name="description">The most commonly used shipping containers; they come in various dimensions
+                standardized by ISO.
+            </field>
+            <field name="type_id" ref="dry_storage_type"/>
+            <field name="size">20</field>
+            <field name="uom_id" ref="uom.product_uom_foot"/>
+            <field name="image_1920" type="base64" file="container_tracking/static/img/dry_storage_container.jpeg"/>
+        </record>
+
+
+        <record id="container_03" model="res.container">
+            <field name="name">Dry storage container</field>
+            <field name="description">The most commonly used shipping containers; they come in various dimensions
+                standardized by ISO.
+            </field>
+            <field name="type_id" ref="dry_storage_type"/>
+            <field name="size">30</field>
+            <field name="uom_id" ref="uom.product_uom_foot"/>
+            <field name="image_1920" type="base64" file="container_tracking/static/img/dry_storage_container.jpeg"/>
+        </record>
+
+        <!-- Containers Flat-->
+        <record id="container_04" model="res.container">
+            <field name="name">Flat rack container</field>
+            <field name="description">TWith collapsible sides, these are like simple storage shipping containers where the sides can be folded so as to make a flat rack for shipping of a wide variety of goods.
+            </field>
+            <field name="type_id" ref="flat_rack_type"/>
+            <field name="size">20</field>
+            <field name="uom_id" ref="uom.product_uom_foot"/>
+            <field name="image_1920" type="base64" file="container_tracking/static/img/flat_rack_container.jpg"/>
+        </record>
+        
+        
+        <record id="container_05" model="res.container">
+            <field name="name">Flat rack container</field>
+            <field name="description">TWith collapsible sides, these are like simple storage shipping containers where the sides can be folded so as to make a flat rack for shipping of a wide variety of goods.
+            </field>
+            <field name="type_id" ref="flat_rack_type"/>
+            <field name="size">40</field>
+            <field name="uom_id" ref="uom.product_uom_foot"/>
+            <field name="image_1920" type="base64" file="container_tracking/static/img/flat_rack_container.jpg"/>
+        </record>
+        
+        <!-- Containers Open Top-->
+        <record id="container_06" model="res.container">
+            <field name="name">Open top container</field>
+            <field name="description">With a convertible top that can be completely removed to make an open-top so that materials of any height can be shipped easily.
+            </field>
+            <field name="type_id" ref="open_top_type"/>
+            <field name="size">40</field>
+            <field name="uom_id" ref="uom.product_uom_foot"/>
+            <field name="image_1920" type="base64" file="container_tracking/static/img/open_top_storage.jpg"/>
+        </record>
+        
+        <!-- Containers Tunnel-->
+        <record id="container_07" model="res.container">
+            <field name="name">Tunnel container</field>
+            <field name="description">Container storage units provided with doors on both ends of the container, they are extremely helpful in quick loading and unloading of materials.
+            </field>
+            <field name="type_id" ref="tunnel_type"/>
+            <field name="size">20</field>
+            <field name="uom_id" ref="uom.product_uom_foot"/>
+            <field name="image_1920" type="base64" file="container_tracking/static/img/tunnel_container.jpg"/>
+        </record>
+        
+        <record id="container_08" model="res.container">
+            <field name="name">Tunnel container</field>
+            <field name="description">Container storage units provided with doors on both ends of the container, they are extremely helpful in quick loading and unloading of materials.
+            </field>
+            <field name="type_id" ref="tunnel_type"/>
+            <field name="size">40</field>
+            <field name="uom_id" ref="uom.product_uom_foot"/>
+            <field name="image_1920" type="base64" file="container_tracking/static/img/tunnel_container.jpg"/>
+        </record>
+        
+        <!-- Containers Open-->
+        <record id="container_09" model="res.container">
+            <field name="name">Open side storage container</field>
+            <field name="description">These storage units are provided with doors that can change into completely open sides providing a much wider room for loading of materials.
+            </field>
+            <field name="type_id" ref="open_side_storage_type"/>
+            <field name="size">20</field>
+            <field name="uom_id" ref="uom.product_uom_foot"/>
+            <field name="image_1920" type="base64" file="container_tracking/static/img/open_final.jpg"/>
+        </record>
+
+
+
+        
+
+    </data>
+</odoo>
