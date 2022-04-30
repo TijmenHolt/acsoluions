@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <record id="view_folder_in_purchase" model="ir.ui.view">
+        <field name="name">folder.in.purchase.form</field>
+        <field name="model">folder.in.purchase</field>
+        <field name="arch" type="xml">
+            <form string="Folder in purchase">
+
+                <group>
+                    <field name="folder_id"/>
+                </group>
+
+                <footer>
+                    <button name="action_apply" string="Apply" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="action_folder_in_purchase" model="ir.actions.act_window">
+        <field name="name">Link The Folder</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">folder.in.purchase</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_folder_in_purchase"/>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="purchase.model_purchase_order"/>
+        <field name="binding_view_types">form,list</field>
+    </record>
+
+</odoo>

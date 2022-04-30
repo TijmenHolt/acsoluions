@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <record id="view_res_container_confirmation" model="ir.ui.view">
+        <field name="name">res.container.confirmation.form</field>
+        <field name="model">res.container.confirmation</field>
+        <field name="arch" type="xml">
+            <form string="Container Confirmation">
+                <group>
+                    <field name="container_ids"
+                           widget="many2many_tags"
+                           domain="[('id' ,'in', containers)]"
+                           options="{'no_create': True, 'no_edit': True, 'no_open': True}"
+                    />
+                </group>
+                <group invisible="1">
+                    <field name="picking_id"/>
+                    <field name="folder_id"/>
+                    <field name="containers"/>
+                </group>
+                <footer>
+                    <button name="action_apply" string="Apply" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

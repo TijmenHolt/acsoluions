@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="folder_stage_tree_view" model="ir.ui.view">
+        <field name="name">folder.stage.tree</field>
+        <field name="model">folder.stage</field>
+        <field name="arch" type="xml">
+
+            <tree string="Folder Stages">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="fold"/>
+                <field name="end"/>
+
+            </tree>
+
+        </field>
+    </record>
+
+    <record id="folder_stage_form_view" model="ir.ui.view">
+        <field name="name">folder.stage.form</field>
+        <field name="model">folder.stage</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <form string="Folder Stages">
+                <header>
+                </header>
+
+                <sheet>
+                    <field name="id"
+                           invisible="True"
+                    />
+                    <div class="oe_title">
+                        <label class="oe_edit_only"
+                               for="name"
+                               string="Container Name"
+                        />
+                        <h1>
+                            <field name="name"
+                                   placeholder="Name"
+                            />
+                        </h1>
+                    </div>
+
+                    <field name="active"
+                           invisible="1"
+                    />
+                    <group col="4">
+                        <field name="fold"/>
+                        <field name="end"/>
+
+                    </group>
+
+                    <notebook>
+                        <page name="checklist" string="Checklist">
+                            <field name="folder_checklist" nolabel="1" mode="tree,kanban">
+                                <tree  editable="bottom">
+      					  <field name="sequence" widget="handle"/>
+	                             	  <field name="name"/>
+    				    </tree>
+			    </field>
+
+			
+                	</page>
+                    </notebook>
+                </sheet>
+
+
+            </form>
+        </field>
+    </record>
+
+  
+      <record id="folder_stage_action" model="ir.actions.act_window">
+        <field name="name">Folder Stage</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">folder.stage</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+
+</odoo>

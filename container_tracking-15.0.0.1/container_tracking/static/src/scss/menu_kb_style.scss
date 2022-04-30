@@ -1,0 +1,108 @@
+/* $chartColors: #ca534f, #c48822 , #53A586, #4faed9, #6d78bf, #56c7fa, #f76540, #ffcb05, #62cd9f, #b67baa;
+@for $i from 1 through length($chartColors) {
+  $chartColors: append($chartColors, darken(nth($chartColors, $i), 25));
+}
+$chartColorsLength: length($chartColors); */
+
+.o_kanban_view.o_kanban_container_folder{
+
+    &.o_kanban_ungrouped {
+            .o_kanban_record {
+
+                width: 170px;
+                height: 105px;
+                margin-top: 50px;
+                position: relative;
+                background-color: #dedede;
+                border-radius: 0 6px 6px 6px;
+                box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.59);
+
+
+
+            }
+
+            .o_kanban_record:before {
+                    content: '';
+                    width: 50%;
+                    height: 12px;
+                    border-radius: 0 20px 0 0;
+                    background-color: #dedede;
+                    position: absolute;
+                    top: -12px;
+                    left: 0px;
+            }
+    }
+
+    &.o_kanban_grouped {
+
+            .o_kanban_record {
+                width: 220px;
+                margin-top: 50px;
+                position: relative;
+                background: #B0C4DE;
+                //@for $i from 1 through $chartColorsLength {
+		    	  //    &:nth-of-type(#{$chartColorsLength}n+#{$i}) {
+		    	    //    background-color: nth($chartColors, $i);
+                      //}
+                //};
+                border-radius: 0 6px 6px 6px;
+                box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.59);
+            }
+            .o_kanban_record:before {
+			    content: '';
+			    width: 50%;
+			    height: 12px;
+			    border-radius: 0 20px 0 0;
+			    background: #B0C4DE;
+			    position: absolute;
+			    top: -12px;
+                	    left: -1px;
+            }
+
+
+                .o_kanban_record_title {
+                    margin-bottom: $o-kanban-inside-vgutter*0.5;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    width: 95%;
+                }
+
+    }
+}
+
+
+.o_kanban_view.o_kanban_container_container{
+
+    &.o_kanban_grouped {
+            .o_kanban_record {
+               margin-top: 20px;
+               width: 220px;
+               height: 120px;
+	       background-image: url('/container_tracking/static/img/container.jpeg');
+ 	       color: white;
+               //border-radius: 0 6px 6px 6px;
+
+	       box-shadow:
+              0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+              0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+              0 12.5px 10px rgba(0, 0, 0, 0.06),
+              0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+              0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+              0 100px 80px rgba(0, 0, 0, 0.12)
+		    ;
+
+
+		}	
+
+                .o_kanban_record_title {
+                    margin-bottom: $o-kanban-inside-vgutter*0.5;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    width: 95%;
+             	    color: white;
+                }
+    }
+}
+

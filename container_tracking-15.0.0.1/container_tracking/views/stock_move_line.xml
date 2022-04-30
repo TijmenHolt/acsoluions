@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+   <record id="view_stock_move_line_detailed_operation_tree_folder_inherit" model="ir.ui.view">
+        <field name="name">stock.move.line.operations.tree.folder.inherit</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_stock_move_line_detailed_operation_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='location_dest_id']" position="after">
+                <field name="folder_id" invisible="1"/>
+                <field name="transport_type" invisible="1"/>
+                <field name="qty_to_done" invisible="1"/>
+                <field name="container_id"
+                       domain="[('folder_id' ,'=', folder_id)]"
+                       context="{'default_folder_id': folder_id,'default_transport_type': transport_type}"
+                       attrs="{'readonly': [('folder_id', '=', False)]}"  optional="show"
+                />
+                <field name="arrival_date" optional="show"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_move_line_form_folder_inherit" model="ir.ui.view">
+        <field name="name">stock.move.line.folder.form</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_move_line_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='owner_id']" position="after">
+                <field name="folder_id" invisible="1"/>
+                <field name="transport_type" invisible="1"/>
+                <field name="container_id"
+                       domain="[('folder_id' ,'=', folder_id)]"
+                       context="{'default_folder_id': folder_id,'default_transport_type': transport_type}"
+                       attrs="{'readonly': [('folder_id', '=', False)]}"
+                />
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_stock_move_line_operation_tree_inherit" model="ir.ui.view">
+        <field name="name">stock.move.line.container.form</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_stock_move_line_operation_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='lot_id']" position="after">
+                <field name="folder_id" invisible="1"/>
+                <field name="transport_type" invisible="1"/>
+                <field name="container_id"
+                       domain="[('folder_id' ,'=', folder_id)]"
+                       context="{'default_folder_id': folder_id,'default_transport_type': transport_type}"
+                       attrs="{'readonly': [('folder_id', '=', False)]}"
+                />
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

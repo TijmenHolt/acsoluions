@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="container_task_type_tree_view" model="ir.ui.view">
+        <field name="name">container.task.type.tree</field>
+        <field name="model">container.task.type</field>
+        <field name="arch" type="xml">
+            <tree name="Checklist" string="Checklist">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="task_checklist_ids"
+                       widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="container_task_type_form_view" model="ir.ui.view">
+        <field name="name">container.task.type.form</field>
+        <field name="model">container.task.type</field>
+        <field name="arch" type="xml">
+            <form string="Task Stage" delete="0">
+                <field name="active" invisible="1"/>
+
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="is_closed" groups="base.group_no_one"/>
+                            <field name="container_ids" widget="many2many_tags" groups="base.group_no_one"/>
+                            <field name="sequence" groups="base.group_no_one"/>
+                            <field name="deadline"/>
+                            <field name="transport_type"/>
+
+                        </group>
+
+                        <!--<group string="Stage Description and Tooltips">
+                            <p class="text-muted" colspan="2">
+                                At each stage employees can block or make task/issue ready for next stage.
+                                You can define here labels that will be displayed for the state instead
+                                of the default labels.
+                            </p>
+                            <label for="legend_normal" string=" " class="o_status oe_project_kanban_legend"
+                                   title="Task in progress. Click to block or set as done."
+                                   aria-label="Task in progress. Click to block or set as done." role="img"/>
+                            <field name="legend_normal" nolabel="1"/>
+                            <label for="legend_blocked" string=" "
+                                   class="o_status o_status_red oe_project_kanban_legend"
+                                   title="Task is blocked. Click to unblock or set as done."
+                                   aria-label="Task is blocked. Click to unblock or set as done." role="img"/>
+                            <field name="legend_blocked" nolabel="1"/>
+                            <label for="legend_done" string=" " class="o_status o_status_green oe_project_kanban_legend"
+                                   title="This step is done. Click to block or set in progress."
+                                   aria-label="This step is done. Click to block or set in progress." role="img"/>
+                            <field name="legend_done" nolabel="1"/>
+
+                            <p class="text-muted" colspan="2">
+                                You can also add a description to help your coworkers understand the meaning and purpose
+                                of the stage.
+                            </p>
+                            <field name="description" placeholder="Add a description..." nolabel="1" colspan="2"/>
+                        </group>-->
+                    </group>
+
+                    <!--  <group>
+                          <field name="task_checklist_ids" widget="many2many_tags"/>
+                      </group>-->
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="view_container_task_type_filter" model="ir.ui.view">
+        <field name="name">container.task.type.select</field>
+        <field name="model">container.task.type</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="name"/>
+                <field name="container_ids"/>
+                <field name="transport_type"/>
+                <separator/>
+                <filter name="active" string="Active" domain="[('active','=',True)]" help="Show active"/>
+                <filter name="inactive" string="Inactive" domain="[('active','=',False)]" help="Show inactive"/>
+                <group string="Group By">
+                    <filter string="Transport type" name="transport_type" domain="[]"
+                            context="{'group_by':'transport_type'}"
+                    />
+                </group>
+	      	    <searchpanel>
+		      <field name="transport_type" icon="fa-retweet" enable_counters="1"/>
+		  </searchpanel>
+            </search>
+        </field>
+    </record>
+
+
+    <record id="container_task_type" model="ir.actions.act_window">
+        <field name="name">Container folder</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">container.task.type</field>
+        <field name="domain">[]</field>
+
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="act_container_2_container_task_all" model="ir.actions.act_window">
+        <field name="name">Container</field>
+        <field name="res_model">res.container.task</field>
+        <field name="view_mode">kanban,form,activity</field>
+        <field name="domain">[('folder_id', '=', active_id)]</field>
+        <field name="context">{
+            'default_project_id': active_id,
+            }
+        </field>
+    </record>
+
+
+    <record id="res_container_folder_view" model="ir.ui.view">
+        <field name="name">res.container.folder.form</field>
+        <field name="model">res.container.folder</field>
+        <field name="arch" type="xml">
+            <form string="Folders" name="container_folder">
+
+                <header>
+                    <field name="stage_id" widget="statusbar"
+                           options="{'clickable': '1', 'fold_field': 'fold'}"/>
+
+                    <button name="action_print"
+                            type="object"
+                            string="Print"
+                    />
+
+                    <button string="Request for Quotation"
+                            name="action_purchase_quotations_new"
+                            type="object"
+                            class="oe_highlight"
+                            attrs="{'invisible': [('active', '=', False)]}"/>
+                </header>
+
+                <sheet string="Folder">
+                    <div class="oe_button_box" name="button_box" groups="base.group_user">
+                        <button class="oe_stat_button" type="action"
+                                name="%(act_container_2_container_task_all)d" icon="fa-tasks">
+                            <field string="Containers In Progress" name="container_count" widget="statinfo"
+                                   options="{'label_field': 'label_containers'}"/>
+                        </button>
+
+                        <button class="oe_stat_button"
+                                name="action_view_purchases"
+                                type="object"
+                                icon="fa-pencil-square-o"
+                                help="Purchase Orders"
+                        >
+                            <field string="Purchase Orders"
+                                   name="supplier_purchase_count"
+                                   widget="statinfo"
+                            />
+                        </button>
+
+
+                        <button class="oe_stat_button" name="attachment_tree_view"
+                                type="object" icon="fa-file-text-o"
+                        >
+                            <field string="Documents" name="doc_count"
+                                   widget="statinfo"
+                            />
+                        </button>
+                    </div>
+
+
+                    <group col="4">
+                        <field name="name"
+                               placeholder="Folder Name"
+                        />
+
+                        <field name="code"
+                               readonly="1"
+                               foce_save="1"
+                        />
+
+                    </group>
+
+                    <notebook>
+
+                        <page name="settings" string="Settings">
+                            <group>
+
+                                <group>
+                                    <field name="active" invisible="1"/>
+                                    <field name="company_currency" invisible="1"/>
+                                    <field name="currency_id" invisible="1"/>
+
+                                    <field name="partner_id" string="Supplier"
+                                           widget="res_partner_many2one"
+                                           context="{'res_partner_search_mode': 'supplier', 'show_address': 1, 'show_vat': True}"
+                                           options='{"always_reload": True}'
+                                    />
+                                    <field name="country_source"/>
+                                    <field name="partner_phone" widget="phone"/>
+                                    <field name="partner_email" widget="email"/>
+                                </group>
+
+                                <group>
+                                    <field name="user_id" string="Manager" widget="many2one_avatar_user"
+                                           attrs="{'readonly':[('active','=',False)]}"
+                                           domain="[('share', '=', False)]"/>
+                                    <field name="country_destination"/>
+                                    <field name="date"/>
+                                </group>
+
+
+                            </group>
+                        </page>
+
+                        <page name="chekclist" string="Chekclist">
+                            <group>
+                                <group>
+                                    <field name="checklist_progress" widget="percentpie" nolabel="1"/>
+                                </group>
+
+                                <group>
+                                    <field name="checklist_related" invisible="1"/>
+                                    <field name="checklist_ids"
+                                           widget="many2many_checkboxes"
+                                           nolabel="1"
+                                           save_force="1"
+                                           domain="[('id', 'in', checklist_related)]"/>
+                                </group>
+                            </group>
+
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string="File"/>
+                                    <field name="datas" widget="binary" string="Upload"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page name="transition" string="Transition Stage">
+                            <field name="type_ids" required="1">
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="name"/>
+                                    <field name="task_checklist_ids" widget='many2many_tags'/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page name="transport" string="Transport">
+                            <field name="transport_ids" required="1">
+                                <tree name="transport_ids" string="Transport">
+                                    <field name="name"/>
+                                    <field name="reference"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                    </notebook>
+
+                    <group class="oe_subtotal_footer oe_right"
+                           colspan="2"
+                           name="folder_total"
+                    >
+                        <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+                            <label for="amount_total"/>
+                        </div>
+
+                        <field name="amount_total"
+                               nolabel="1"
+                               class="oe_subtotal_footer_separator"
+                               widget='monetary'
+                               options="{'currency_field': 'company_currency'}"
+                        />
+                    </group>
+                    <div class="oe_clear"/>
+
+                </sheet>
+
+                <!-- Attachment preview -->
+                <div class="o_attachment_preview"/>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+
+            </form>
+        </field>
+    </record>
+
+
+    <record id="container_view_form_simplified_footer" model="ir.ui.view">
+        <field name="name">res.container.folder.form</field>
+        <field name="model">res.container.folder</field>
+        <field name="arch" type="xml">
+            <form string="Folders" name="container_folder">
+
+                <header>
+                    <field name="stage_id" widget="statusbar"
+                           options="{'clickable': '1', 'fold_field': 'fold'}"/>
+                </header>
+                <group col="4">
+                    <field name="name" placeholder="Folder Name"/>
+                    <field name="partner_id"/>
+                    <field name="company_id" invisible="1"/>
+                    <field name="transport_ids" widget="many2many_tags" required="1"/>
+                </group>
+
+                <footer>
+                    <button name="create_folder" string="Apply" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+
+            </form>
+        </field>
+    </record>
+
+
+    <record id="open_create_folder" model="ir.actions.act_window">
+        <field name="name">Create a Folder</field>
+        <field name="res_model">res.container.folder</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="container_view_form_simplified_footer"/>
+        <field name="target">new</field>
+    </record>
+
+
+    <!--kanban-->
+    <record id="res_container_folder_kanban_view" model="ir.ui.view">
+        <field name="name">res.container.folder.kanban</field>
+        <field name="model">res.container.folder</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+
+            <kanban default_group_by="stage_id" class="o_kanban_container_folder" sample="1"
+                    on_create="container_tracking.open_create_folder">
+                <field name="id"/>
+                <field name="code"/>
+                <field name="country_source"/>
+                <field name="country_destination"/>
+                <field name="name"/>
+                <field name="date"/>
+                <field name="user_id"/>
+                <field name="color"/>
+                <field name="kanban_state"/>
+                <field name="stage_id" options='{"group_by_tooltip": {"name": "Description"}}'/>
+                <field name="partner_id"/>
+                <field name="is_favorite"/>
+                <field name="company_currency"/>
+                <field name="activity_state"/>
+                <field name="activity_ids"/>
+                <progressbar field="activity_state"
+                             colors='{"planned": "success", "today": "warning", "overdue": "danger"}'
+                             sum_field="expected_depense"/>
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="#{!selection_mode ? kanban_color(record.color.raw_value) : ''} oe_kanban_global_click">
+                            <div class="o_dropdown_kanban dropdown">
+
+                                <a class="dropdown-toggle o-no-caret btn"
+                                   role="button" data-toggle="dropdown"
+                                   data-display="static" href="#"
+                                   aria-label="Dropdown menu" title="Dropdown menu">
+                                    <span class="fa fa-ellipsis-v"/>
+                                </a>
+
+                                <div class="dropdown-menu" role="menu">
+                                    <t t-if="widget.editable">
+                                        <a role="menuitem" type="edit" class="dropdown-item">Edit</a>
+                                    </t>
+                                    <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                </div>
+                            </div>
+
+                            <div class="o_kanban_record_code" style="margin-top: -11px;">
+                                <strong>
+                                    <field name="code"/>
+                                </strong>
+                            </div>
+
+                            <div class="oe_kanban_content">
+
+                                <div class="o_kanban_record_title">
+                                    <strong>
+                                        <field name="name"/>
+                                    </strong>
+                                </div>
+                                <div class="o_kanban_record_subtitle">
+                                    <t t-if="record.expected_depense.raw_value">
+                                        <field name="expected_depense"
+                                               widget="monetary"
+                                               options="{'currency_field': 'company_currency'}"/>
+                                    </t>
+                                </div>
+                                <div>
+                                    <span t-if="record.partner_id.value" t-esc="record.partner_id.value"></span>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="o_kanban_record_bottom">
+
+                                    <div class="oe_kanban_bottom_left">
+                                        <field name="priority" widget="priority" groups="base.group_user"/>
+                                        <field name="activity_ids" widget="kanban_activity"/>
+                                    </div>
+
+                                    <div class="oe_kanban_bottom_center">
+                                        <field name="checklist_progress" widget="gauge"
+                                               options="{'max_field': 'max_rate',  'style': 'width:80px; height: 70px;'}">
+                                        </field>
+                                    </div>
+                                    <div class="oe_kanban_bottom_right">
+                                        <field name="user_id" widget="many2one_avatar_user"/>
+                                    </div>
+
+                                </div>
+                                <div class="o_kanban_footer">
+
+                                    <div t-if="record.country_source_image_url.raw_value">
+                                        <field name="country_source_image_url" widget="image_url" class="oe_avatar"
+                                               width="25"
+                                               height="25"/>
+                                    </div>
+                                    <div t-if="record.country_destination_image_url.raw_value">
+                                        <field name="country_destination_image_url" widget="image_url" class="oe_avatar"
+                                               width="25"
+                                               height="25"/>
+                                        <!--
+                                        <img alt="Destination" t-if="record.country_destination.raw_value"
+                                             t-att-src="'/base/static/img/country_flags/%s.png % country_destination.code'"/>
+                                             -->
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="oe_clear"/>
+                        </div>
+                    </t>
+                </templates>
+
+            </kanban>
+
+        </field>
+    </record>
+
+    <record id="view_container_folder_filter" model="ir.ui.view">
+        <field name="name">res.container.folder.select</field>
+        <field name="model">res.container.folder</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="name" filter_domain="['|', ('name', 'ilike', self), ('code', 'ilike', self)]"/>
+                <field name="partner_id"/>
+                <field name="user_id" string="Manager"/>
+                <field name="country_source"/>
+                <field name="country_destination"/>
+                <field name="transport_ids"/>
+                <separator/>
+                <filter name="active" string="Active" domain="[('active','=',True)]" help="Show active"/>
+                <filter name="inactive" string="Inactive" domain="[('active','=',False)]" help="Show inactive"/>
+                <group string="Group By">
+                    <filter string="Company" name="company" domain="[]" context="{'group_by':'company_id'}"
+                            groups="base.group_multi_company"/>
+                    <filter string="Partner" name="partner_id" domain="[]"
+                            context="{'group_by':'partner_id'}"/>
+                    <filter string="Country source" name="country_source" domain="[]"
+                            context="{'group_by':'country_source'}"/>
+                    <filter string="Country destination" name="country_destination" domain="[]"
+                            context="{'group_by':'country_destination'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+    <record id="res_container_folder" model="ir.actions.act_window">
+        <field name="name">Container folder</field>
+        <field name="res_model">res.container.folder</field>
+        <field name="view_mode">kanban,form,activity</field>
+        <field name="view_id" ref=""/>
+        <field name="view_ids" eval="[(5, 0, 0),
+    		(0, 0, {'view_mode': 'kanban', 'view_id': ref('res_container_folder_kanban_view')}),
+    		(0, 0, {'view_mode': 'form', 'view_id': ref('res_container_folder_view')})]"/>
+        <field name="search_view_id" ref="view_container_folder_filter"/>
+        <field name="domain">[]</field>
+        <field name="target">main</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Folders found. Let's create one!
+            </p>
+            <p>
+                Folders regroup tasks on the same topic and each have their own dashboard.
+            </p>
+        </field>
+    </record>
+
+
+</odoo>

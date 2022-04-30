@@ -1,0 +1,1746 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* container_tracking
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-20 21:03+0000\n"
+"PO-Revision-Date: 2021-10-20 21:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__amount_total
+msgid "# Amount Total"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__supplier_purchase_count
+msgid "# Purchase Orders"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_transport_form_view
+msgid "<span>to</span>"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__access_warning
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__access_warning
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__access_warning
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__access_warning
+msgid "Access warning"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__message_needaction
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__message_needaction
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__message_needaction
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__active
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__active
+#: model:ir.model.fields,field_description:container_tracking.field_folder_stage__active
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__active
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__active
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__active
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__active
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_folder_filter
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_task_filter
+msgid "Active"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__activity_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__activity_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__activity_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__activity_exception_decoration
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__activity_exception_decoration
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__activity_exception_decoration
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__activity_state
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__activity_state
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__activity_state
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__activity_type_icon
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__activity_type_icon
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__activity_type_icon
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields.selection,name:container_tracking.selection__container_task_type__transport_type__plane
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_folder__transport_type__plane
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_transport__transport_type__plane
+msgid "Airplane"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.actions.act_window,name:container_tracking.res_transport_plane_action
+#: model:ir.ui.menu,name:container_tracking.transport_plane_menu
+msgid "Airplanes"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.container_view_form_simplified_footer
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_folder_in_purchase
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_put_in_container
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_res_container_confirmation
+msgid "Apply"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.folder_checklist_form_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.folder_stage_form_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_form_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_transport_form_view
+msgid "Archived"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__arrival
+msgid "Arrival"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_stock_move_line__arrival_date
+msgid "Arrival date"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__attachment_ids
+msgid "Attachment"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__message_attachment_count
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__message_attachment_count
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__message_attachment_count
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_stock_backorder_confirmation
+msgid "Backorder Confirmation"
+msgstr "تأكيد أمر المؤجلات"
+
+#. module: container_tracking
+#: code:addons/container_tracking/models/container_task_type.py:0
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_task__kanban_state__blocked
+#, python-format
+msgid "Blocked"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields.selection,name:container_tracking.selection__container_task_type__transport_type__ship
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_folder__transport_type__ship
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_transport__transport_type__ship
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_kanban_view
+msgid "Boat"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.actions.act_window,name:container_tracking.res_transport_boat_action
+#: model:ir.ui.menu,name:container_tracking.transport_boat_menu
+msgid "Boats"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.container_view_form_simplified_footer
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_folder_in_purchase
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_put_in_container
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_res_container_confirmation
+msgid "Cancel"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__task_checklist_ids
+msgid "Check List"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_stage__folder_checklist
+msgid "Check List (Stage)"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.container_task_type_tree_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.folder_checklist_form_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.folder_stage_form_view
+msgid "Checklist"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_folder_checklist
+msgid "Checklist for the folder"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_container_task_checklist
+msgid "Checklist for the task"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__checklist_ids
+msgid "Checklists"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__checklist_related
+msgid "Checklists related"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+msgid "Chekclist"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.actions.act_window,help:container_tracking.action_folder_checklist
+msgid "Click to create New Checklist"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__is_closed
+msgid "Closing Stage"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__color
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__color
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__color
+msgid "Color Index"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__company_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__company_id
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_folder_filter
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_task_filter
+msgid "Company"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.ui.menu,name:container_tracking.container_config
+msgid "Configuration"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: container_tracking
+#: model:ir.actions.act_window,name:container_tracking.act_container_2_container_task_all
+#: model:ir.actions.act_window,name:container_tracking.res_container_action
+#: model:ir.model.fields,field_description:container_tracking.field_put_in_container__container_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__name
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__container_id
+#: model:ir.model.fields,field_description:container_tracking.field_stock_move_line__container_id
+#: model:ir.ui.menu,name:container_tracking.container_configuration
+#: model_terms:ir.ui.view,arch_db:container_tracking.containers_view_form_simplified_footer
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_form_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_kanban_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_tree_view
+msgid "Container"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_res_container_confirmation
+msgid "Container Confirmation"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__container_count
+msgid "Container Count"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.folder_stage_form_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_form_view
+msgid "Container Name"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_res_container_task
+msgid "Container Task"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.actions.act_window,name:container_tracking.res_container_type_action
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__type_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_type__name
+#: model:ir.ui.menu,name:container_tracking.container_type_confirguration
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_type_tree_view
+msgid "Container Type"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_res_container_confirmation
+msgid "Container confirmation Wizard"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.actions.act_window,name:container_tracking.container_task_type
+#: model:ir.actions.act_window,name:container_tracking.res_container_folder
+#: model:ir.ui.menu,name:container_tracking.container_folder
+msgid "Container folder"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container,description:container_tracking.container_07
+#: model:res.container,description:container_tracking.container_08
+msgid ""
+"Container storage units provided with doors on both ends of the container, they are extremely helpful in quick loading and unloading of materials.\n"
+"            "
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.actions.act_window,name:container_tracking.res_container_task_action
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_confirmation__container_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_confirmation__containers
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__container_ids
+#: model:ir.ui.menu,name:container_tracking.container_menu
+#: model:ir.ui.menu,name:container_tracking.container_root
+#: model:ir.ui.menu,name:container_tracking.container_task
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_transport_form_view
+msgid "Containers"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+msgid "Containers In Progress"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__country_destination
+msgid "Country Destination"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__country_source
+msgid "Country Source"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_folder_filter
+msgid "Country destination"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_folder_filter
+msgid "Country source"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.actions.act_window,name:container_tracking.open_create_container
+#: model:ir.actions.act_window,name:container_tracking.open_create_folder
+msgid "Create a Folder"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.actions.act_window,help:container_tracking.res_container_action
+msgid "Create a new Container"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.actions.act_window,help:container_tracking.res_container_type_action
+msgid "Create a new Container Type"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.actions.act_window,help:container_tracking.res_transport_boat_action
+#: model_terms:ir.actions.act_window,help:container_tracking.res_transport_plane_action
+#: model_terms:ir.actions.act_window,help:container_tracking.res_transport_train_action
+#: model_terms:ir.actions.act_window,help:container_tracking.res_transport_truck_action
+msgid "Create a new Transport"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_checklist__create_uid
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__create_uid
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__create_uid
+#: model:ir.model.fields,field_description:container_tracking.field_folder_in_purchase__create_uid
+#: model:ir.model.fields,field_description:container_tracking.field_folder_stage__create_uid
+#: model:ir.model.fields,field_description:container_tracking.field_put_in_container__create_uid
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__create_uid
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_confirmation__create_uid
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__create_uid
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__create_uid
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_type__create_uid
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_checklist__create_date
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__create_date
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__create_date
+#: model:ir.model.fields,field_description:container_tracking.field_folder_in_purchase__create_date
+#: model:ir.model.fields,field_description:container_tracking.field_folder_stage__create_date
+#: model:ir.model.fields,field_description:container_tracking.field_put_in_container__create_date
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__create_date
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_confirmation__create_date
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__create_date
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__create_date
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_type__create_date
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__company_currency
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_folder_checklist__access_url
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__access_url
+#: model:ir.model.fields,help:container_tracking.field_res_container_task__access_url
+#: model:ir.model.fields,help:container_tracking.field_res_transport__access_url
+msgid "Customer Portal URL"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__date
+msgid "Date"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_transport_form_view
+msgid "Dates"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__date_deadline
+msgid "Deadline"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__deadline
+msgid "Deadline (Days)"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__departure
+msgid "Departure"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_checklist__description
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__description
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__description
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__description
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__description
+#: model_terms:ir.ui.view,arch_db:container_tracking.folder_checklist_form_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_form_view
+msgid "Description"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.containers_view_form_simplified_footer
+msgid "Detailed Operations"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_checklist__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_folder_in_purchase__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_folder_stage__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_put_in_container__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_confirmation__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_type__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_res_partner__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_stock_backorder_confirmation__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_stock_move__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:container_tracking.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.folder_checklist_form_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+msgid "Documents"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container.type,name:container_tracking.double_doors_type
+msgid "Double doors"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_kanban_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_task_kanban_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_transport_kanban_view
+msgid "Dropdown menu"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container.type,name:container_tracking.drums_type
+msgid "Drums"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container.type,name:container_tracking.dry_storage_type
+msgid "Dry"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container,name:container_tracking.container_01
+#: model:res.container,name:container_tracking.container_02
+#: model:res.container,name:container_tracking.container_03
+msgid "Dry storage container"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_kanban_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_transport_kanban_view
+msgid "Edit"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__partner_email
+msgid "Email"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__email_cc
+msgid "Email cc"
+msgstr ""
+
+#. module: container_tracking
+#: model:folder.stage,name:container_tracking.stage_folder4
+msgid "End"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_stage__end
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__end_state
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__end_state
+msgid "End of Stage"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__expected_depense
+msgid "Expected depense"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+msgid "File"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__country_destination_image_url
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__country_source_image_url
+msgid "Flag"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container.type,name:container_tracking.flat_rack_type
+msgid "Flat rack"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container,name:container_tracking.container_04
+#: model:res.container,name:container_tracking.container_05
+msgid "Flat rack container"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__fold
+#: model:ir.model.fields,field_description:container_tracking.field_folder_stage__fold
+msgid "Folded in Pipeline"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_in_purchase__folder_id
+#: model:ir.model.fields,field_description:container_tracking.field_purchase_order__folder_id
+#: model:ir.model.fields,field_description:container_tracking.field_put_in_container__folder_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_confirmation__folder_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__folder_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__folder_id
+#: model:ir.model.fields,field_description:container_tracking.field_stock_move__folder_id
+#: model:ir.model.fields,field_description:container_tracking.field_stock_move_line__folder_id
+#: model:ir.model.fields,field_description:container_tracking.field_stock_picking__folder_id
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_task_filter
+msgid "Folder"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.actions.act_window,name:container_tracking.action_folder_checklist
+msgid "Folder Checklist"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.ui.menu,name:container_tracking.folder_confirguration
+msgid "Folder Confirguration"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.container_view_form_simplified_footer
+#: model_terms:ir.ui.view,arch_db:container_tracking.folder_checklist_form_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+msgid "Folder Name"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.actions.act_window,name:container_tracking.folder_stage_action
+msgid "Folder Stage"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_folder_stage
+#: model_terms:ir.ui.view,arch_db:container_tracking.folder_stage_form_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.folder_stage_tree_view
+msgid "Folder Stages"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_folder_in_purchase
+msgid "Folder in purchase"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_task_kanban_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_transport_form_view
+msgid "Folder:"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__container_ids
+#: model:ir.ui.menu,name:container_tracking.folder_menu
+#: model_terms:ir.ui.view,arch_db:container_tracking.container_view_form_simplified_footer
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+msgid "Folders"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.actions.act_window,help:container_tracking.res_container_folder
+#: model_terms:ir.actions.act_window,help:container_tracking.res_container_task_action
+msgid ""
+"Folders regroup tasks on the same topic and each have their own dashboard."
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__message_follower_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__message_follower_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__message_follower_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__message_channel_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__message_channel_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__message_channel_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__message_partner_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__message_partner_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__message_partner_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_folder_checklist__activity_type_icon
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__activity_type_icon
+#: model:ir.model.fields,help:container_tracking.field_res_container_task__activity_type_icon
+#: model:ir.model.fields,help:container_tracking.field_res_transport__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.ui.menu,name:container_tracking.folder_check_list_confirguration
+msgid "Forlder Checklist"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.ui.menu,name:container_tracking.folder_stage_confirguration
+msgid "Forlder Stages"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_form_view
+msgid "General Information"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__legend_done
+msgid "Green Kanban Label"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__legend_normal
+msgid "Grey Kanban Label"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_folder_filter
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_task_filter
+msgid "Group By"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container.type,name:container_tracking.half_height_type
+msgid "Half height"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_stock_picking__show_update_container
+msgid "Has Cancel Changed"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_folder__priority__2
+msgid "High"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_checklist__id
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__id
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__id
+#: model:ir.model.fields,field_description:container_tracking.field_folder_in_purchase__id
+#: model:ir.model.fields,field_description:container_tracking.field_folder_stage__id
+#: model:ir.model.fields,field_description:container_tracking.field_purchase_order__id
+#: model:ir.model.fields,field_description:container_tracking.field_put_in_container__id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_confirmation__id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_type__id
+#: model:ir.model.fields,field_description:container_tracking.field_res_partner__id
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__id
+#: model:ir.model.fields,field_description:container_tracking.field_stock_backorder_confirmation__id
+#: model:ir.model.fields,field_description:container_tracking.field_stock_move__id
+#: model:ir.model.fields,field_description:container_tracking.field_stock_move_line__id
+#: model:ir.model.fields,field_description:container_tracking.field_stock_picking__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__activity_exception_icon
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__activity_exception_icon
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__activity_exception_icon
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_folder_checklist__activity_exception_icon
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__activity_exception_icon
+#: model:ir.model.fields,help:container_tracking.field_res_container_task__activity_exception_icon
+#: model:ir.model.fields,help:container_tracking.field_res_transport__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_folder_checklist__message_needaction
+#: model:ir.model.fields,help:container_tracking.field_folder_checklist__message_unread
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__message_needaction
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__message_unread
+#: model:ir.model.fields,help:container_tracking.field_res_container_task__message_needaction
+#: model:ir.model.fields,help:container_tracking.field_res_container_task__message_unread
+#: model:ir.model.fields,help:container_tracking.field_res_transport__message_needaction
+#: model:ir.model.fields,help:container_tracking.field_res_transport__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_folder_checklist__message_has_error
+#: model:ir.model.fields,help:container_tracking.field_folder_checklist__message_has_sms_error
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__message_has_error
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__message_has_sms_error
+#: model:ir.model.fields,help:container_tracking.field_res_container_task__message_has_error
+#: model:ir.model.fields,help:container_tracking.field_res_container_task__message_has_sms_error
+#: model:ir.model.fields,help:container_tracking.field_res_transport__message_has_error
+#: model:ir.model.fields,help:container_tracking.field_res_transport__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_res_container__active
+msgid ""
+"If unchecked, it will allow you to hide the container without removing it."
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__image_1920
+msgid "Image"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__image_1024
+msgid "Image 1024"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__image_128
+msgid "Image 128"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__image_256
+msgid "Image 256"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__image_512
+msgid "Image 512"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_task__priority__1
+msgid "Important"
+msgstr ""
+
+#. module: container_tracking
+#: code:addons/container_tracking/models/container_task_type.py:0
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_task__kanban_state__normal
+#, python-format
+msgid "In Progress"
+msgstr ""
+
+#. module: container_tracking
+#: model:folder.stage,name:container_tracking.stage_folder2
+msgid "In progress"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_folder_filter
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_task_filter
+msgid "Inactive"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container.type,name:container_tracking.insulated_type
+msgid "Insulated"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container.type,name:container_tracking.intermediate_type
+msgid "Intermediate"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__message_is_follower
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__message_is_follower
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__message_is_follower
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__kanban_state
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__kanban_state
+msgid "Kanban State"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_checklist____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_folder_in_purchase____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_folder_stage____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_purchase_order____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_put_in_container____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_res_container____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_confirmation____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_type____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_res_partner____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_stock_backorder_confirmation____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_stock_move____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_stock_move_line____last_update
+#: model:ir.model.fields,field_description:container_tracking.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_checklist__write_uid
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__write_uid
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__write_uid
+#: model:ir.model.fields,field_description:container_tracking.field_folder_in_purchase__write_uid
+#: model:ir.model.fields,field_description:container_tracking.field_folder_stage__write_uid
+#: model:ir.model.fields,field_description:container_tracking.field_put_in_container__write_uid
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__write_uid
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_confirmation__write_uid
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__write_uid
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__write_uid
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_type__write_uid
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_checklist__write_date
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__write_date
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__write_date
+#: model:ir.model.fields,field_description:container_tracking.field_folder_in_purchase__write_date
+#: model:ir.model.fields,field_description:container_tracking.field_folder_stage__write_date
+#: model:ir.model.fields,field_description:container_tracking.field_put_in_container__write_date
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__write_date
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_confirmation__write_date
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__write_date
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__write_date
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_type__write_date
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.actions.act_window,name:container_tracking.action_folder_in_purchase
+msgid "Link The Folder"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_folder_in_purchase
+msgid "Link The Folder to Purchase & picking"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_res_container_task__email_cc
+msgid "List of cc from incoming emails."
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_folder__priority__0
+msgid "Low"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__message_main_attachment_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__message_main_attachment_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__message_main_attachment_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_folder_filter
+msgid "Manager"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__max_rate
+msgid "Maximum rate"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_folder__priority__1
+msgid "Medium"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__favorite_user_ids
+msgid "Members"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__message_has_error
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__message_has_error
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__message_has_error
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__message_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__message_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__message_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__package_level_ids_details
+msgid "Move"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__my_activity_date_deadline
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__my_activity_date_deadline
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__my_activity_date_deadline
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.ui.menu,name:container_tracking.purchase_order_menu_quotations_crm
+msgid "My Quotations"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_checklist__name
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__name
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__name
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__name
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__name
+#: model_terms:ir.ui.view,arch_db:container_tracking.folder_stage_form_view
+msgid "Name"
+msgstr ""
+
+#. module: container_tracking
+#: code:addons/container_tracking/models/res_container_folder.py:0
+#: code:addons/container_tracking/models/res_transport.py:0
+#: model:folder.stage,name:container_tracking.stage_folder1
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__activity_date_deadline
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__activity_date_deadline
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__activity_date_deadline
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__activity_summary
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__activity_summary
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__activity_summary
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__activity_type_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__activity_type_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__activity_type_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_folder__kanban_state__green
+msgid "Next activity is planned"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_folder__kanban_state__red
+msgid "Next activity late"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.actions.act_window,help:container_tracking.res_container_folder
+#: model_terms:ir.actions.act_window,help:container_tracking.res_container_task_action
+msgid "No Folders found. Let's create one!"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_folder__kanban_state__grey
+msgid "No next activity planned"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_task__priority__0
+msgid "Normal"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__message_needaction_counter
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__message_needaction_counter
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__message_needaction_counter
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__doc_count
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__doc_count
+msgid "Number of documents attached"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__message_has_error_counter
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__message_has_error_counter
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__message_has_error_counter
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_folder_checklist__message_needaction_counter
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__message_needaction_counter
+#: model:ir.model.fields,help:container_tracking.field_res_container_task__message_needaction_counter
+#: model:ir.model.fields,help:container_tracking.field_res_transport__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_folder_checklist__message_has_error_counter
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__message_has_error_counter
+#: model:ir.model.fields,help:container_tracking.field_res_container_task__message_has_error_counter
+#: model:ir.model.fields,help:container_tracking.field_res_transport__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_folder_checklist__message_unread_counter
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__message_unread_counter
+#: model:ir.model.fields,help:container_tracking.field_res_container_task__message_unread_counter
+#: model:ir.model.fields,help:container_tracking.field_res_transport__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container.type,name:container_tracking.open_side_storage_type
+msgid "Open side"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container,name:container_tracking.container_09
+msgid "Open side storage container"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container.type,name:container_tracking.open_top_type
+msgid "Open top"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container,name:container_tracking.container_06
+msgid "Open top container"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_folder_filter
+msgid "Partner"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__partner_phone
+msgid "Phone"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_confirmation__picking_id
+msgid "Picking"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__picking_ids
+msgid "Pickings"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_kanban_view
+msgid "Plane"
+msgstr ""
+
+#. module: container_tracking
+#: code:addons/container_tracking/models/stock_picking.py:0
+#, python-format
+msgid "Please Create your stages before."
+msgstr ""
+
+#. module: container_tracking
+#: code:addons/container_tracking/models/stock_picking.py:0
+#, python-format
+msgid "Please Make sure to have your folder."
+msgstr ""
+
+#. module: container_tracking
+#: code:addons/container_tracking/models/stock_picking.py:0
+#, python-format
+msgid "Please add 'Done' quantities to the picking to create a new container."
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__access_url
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__access_url
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__access_url
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__access_url
+msgid "Portal Access URL"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+msgid "Print"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__priority
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__priority
+msgid "Priority"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "تحركات المنتج (بنود حركة المخزون)"
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_form_view
+msgid "Product Name"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__checklist_progress
+msgid "Progress"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_purchase_order
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: container_tracking
+#: code:addons/container_tracking/models/res_container_folder.py:0
+#, python-format
+msgid "Purchase Order(s)"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+msgid "Purchase Orders"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_put_in_container
+msgid "Put Move line in container"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_picking_form_folder_inherit
+msgid "Put in Container"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.actions.act_window,name:container_tracking.action_put_in_container
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_put_in_container
+msgid "Put in container"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_stock_move_line__qty_to_done
+msgid "Qty to done"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.actions.act_window,name:container_tracking.purchase_action_quotations_new
+msgid "Quotation"
+msgstr ""
+
+#. module: container_tracking
+#: code:addons/container_tracking/models/container_task_type.py:0
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_task__kanban_state__done
+#, python-format
+msgid "Ready"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__legend_blocked
+msgid "Red Kanban Label"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__code
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__reference
+msgid "Reference"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+msgid "Request for Quotation"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_res_container
+#: model:ir.model,name:container_tracking.model_res_container_type
+msgid "Res container"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_res_container_folder
+msgid "Res container folder"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_res_transport
+msgid "Res transport"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__activity_user_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__activity_user_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__activity_user_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__message_has_sms_error
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__message_has_sms_error
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__message_has_sms_error
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_task_filter
+msgid "Search Container"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_folder_filter
+msgid "Search Folder"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__access_token
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__access_token
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__access_token
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__access_token
+msgid "Security Token"
+msgstr ""
+
+#. module: container_tracking
+#: code:addons/container_tracking/models/stock_picking.py:0
+#, python-format
+msgid "Select Containers"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__sequence
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__sequence
+#: model:ir.model.fields,field_description:container_tracking.field_folder_stage__sequence
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__sequence
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__sequence
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__sequence
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_type__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__sequence_number
+msgid "Sequence Number"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__sequence_prefix
+msgid "Sequence Prefix"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+msgid "Settings"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__is_favorite
+msgid "Show Folder on dashboard"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_folder_filter
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_task_filter
+msgid "Show active"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_folder_filter
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_task_filter
+msgid "Show inactive"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__size
+msgid "Size"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_kanban_view
+msgid "Size:"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_put_in_container__stage_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__stage_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__stage_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__stage_id
+msgid "Stage"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__name
+#: model:ir.model.fields,field_description:container_tracking.field_folder_stage__name
+msgid "Stage Name"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__stages
+#: model:ir.ui.menu,name:container_tracking.container_task_type_confirguration
+msgid "Stages"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_folder_checklist__activity_state
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__activity_state
+#: model:ir.model.fields,help:container_tracking.field_res_container_task__activity_state
+#: model:ir.model.fields,help:container_tracking.field_res_transport__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_stock_move
+msgid "Stock Move"
+msgstr "حركة المخزون"
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_put_in_container__picking_id
+msgid "Stock Picking"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.containers_view_form_simplified_footer
+msgid "Stock move"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_put_in_container__move_line_ids
+msgid "Stock move line"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__partner_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__partner_id
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__partner_id
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+msgid "Supplier"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_task_kanban_view
+msgid "Supplier:"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container.type,name:container_tracking.swap_bodies_type
+msgid "Swap bodies"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container,description:container_tracking.container_04
+#: model:res.container,description:container_tracking.container_05
+msgid ""
+"TWith collapsible sides, these are like simple storage shipping containers where the sides can be folded so as to make a flat rack for shipping of a wide variety of goods.\n"
+"            "
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container.type,name:container_tracking.tanks_type
+msgid "Tanks"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_container_task_type
+#: model_terms:ir.ui.view,arch_db:container_tracking.container_task_type_form_view
+msgid "Task Stage"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__task_ids
+msgid "Tasks"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__type_ids
+msgid "Tasks Stages"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_container_task_type__is_closed
+msgid "Tasks in this stage are considered as closed."
+msgstr ""
+
+#. module: container_tracking
+#: code:addons/container_tracking/models/stock_picking.py:0
+#, python-format
+msgid ""
+"The backorder <a href=# data-oe-model=stock.picking data-oe-id=%d>%s</a> has"
+" been created."
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container,description:container_tracking.container_01
+#: model:res.container,description:container_tracking.container_02
+#: model:res.container,description:container_tracking.container_03
+msgid ""
+"The most commonly used shipping containers; they come in various dimensions\n"
+"                standardized by ISO.\n"
+"            "
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container,description:container_tracking.container_09
+msgid ""
+"These storage units are provided with doors that can change into completely open sides providing a much wider room for loading of materials.\n"
+"            "
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_container_task_type__fold
+#: model:ir.model.fields,help:container_tracking.field_folder_stage__fold
+msgid ""
+"This stage is folded in the kanban view when there are no records in that "
+"stage to display."
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields.selection,name:container_tracking.selection__container_task_type__transport_type__train
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_folder__transport_type__train
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_transport__transport_type__train
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_kanban_view
+msgid "Train"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.actions.act_window,name:container_tracking.res_transport_train_action
+#: model:ir.ui.menu,name:container_tracking.transport_train_menu
+msgid "Trains"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model,name:container_tracking.model_stock_picking
+msgid "Transfer"
+msgstr "الشحنة"
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+msgid "Transition"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+msgid "Transition Stage"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__transport_id
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_transport_form_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_transport_tree_view
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_task_filter
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_res_transport_calendar
+msgid "Transport"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_transport_form_view
+msgid "Transport Name"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_container_task_type__transport_type
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__transport_type
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__transport_type
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__transport_type
+#: model:ir.model.fields,field_description:container_tracking.field_stock_move_line__transport_type
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_container_folder_filter
+msgid "Transport type"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__transport_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__transport_ids
+#: model:ir.ui.menu,name:container_tracking.transport_menu
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+msgid "Transports"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_kanban_view
+msgid "Truck"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.actions.act_window,name:container_tracking.res_transport_truck_action
+#: model:ir.ui.menu,name:container_tracking.transport_truck_menu
+msgid "Trucks"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields.selection,name:container_tracking.selection__container_task_type__transport_type__truck
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_folder__transport_type__truck
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_transport__transport_type__truck
+msgid "Tuck"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container.type,name:container_tracking.tunnel_type
+msgid "Tunnel"
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container,name:container_tracking.container_07
+#: model:res.container,name:container_tracking.container_08
+msgid "Tunnel container"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_folder_checklist__activity_exception_decoration
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__activity_exception_decoration
+#: model:ir.model.fields,help:container_tracking.field_res_container_task__activity_exception_decoration
+#: model:ir.model.fields,help:container_tracking.field_res_transport__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container__uom_id
+msgid "UOM"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.containers_view_form_simplified_footer
+msgid "Unit of Measure"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__message_unread
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__message_unread
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__message_unread
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__message_unread_counter
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__message_unread_counter
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__message_unread_counter
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.view_picking_form_folder_inherit
+msgid "Update Container Qty"
+msgstr ""
+
+#. module: container_tracking
+#: model_terms:ir.ui.view,arch_db:container_tracking.res_container_folder_view
+msgid "Upload"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_task__priority__2
+msgid "Urgent"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__country_destination_image_url
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__country_source_image_url
+msgid "Url of static flag image"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_folder_stage__sequence
+msgid "Used to order stages. Lower is better."
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__user_id
+msgid "User"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__currency_id
+msgid "Utility field to express amount currency"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.ui.menu,name:container_tracking.container_supplier
+msgid "Vendors"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields.selection,name:container_tracking.selection__res_container_folder__priority__3
+msgid "Very High"
+msgstr ""
+
+#. module: container_tracking
+#: model:folder.stage,name:container_tracking.stage_folder3
+msgid "Waiting"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,field_description:container_tracking.field_folder_checklist__website_message_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_folder__website_message_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_container_task__website_message_ids
+#: model:ir.model.fields,field_description:container_tracking.field_res_transport__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_folder_checklist__website_message_ids
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__website_message_ids
+#: model:ir.model.fields,help:container_tracking.field_res_container_task__website_message_ids
+#: model:ir.model.fields,help:container_tracking.field_res_transport__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: container_tracking
+#: model:ir.model.fields,help:container_tracking.field_res_container_folder__is_favorite
+msgid "Whether this project should be displayed on your dashboard."
+msgstr ""
+
+#. module: container_tracking
+#: model:res.container,description:container_tracking.container_06
+msgid ""
+"With a convertible top that can be completely removed to make an open-top so that materials of any height can be shipped easily.\n"
+"            "
+msgstr ""
+
+#. module: container_tracking
+#: code:addons/container_tracking/models/res_container_folder.py:0
+#, python-format
+msgid ""
+"You cannot delete a Folder containing containers. You can either archive it "
+"or first delete all of its containers."
+msgstr ""

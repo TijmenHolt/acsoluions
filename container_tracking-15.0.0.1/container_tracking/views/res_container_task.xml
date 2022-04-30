@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="containers_view_form_simplified_footer" model="ir.ui.view">
+        <field name="name">res.container.task.form</field>
+        <field name="model">res.container.task</field>
+        <field name="arch" type="xml">
+            <form string="Container" name="container" create="false" delete="false">
+
+                <header>
+                    <field name="stage_id" widget="statusbar"
+                           options="{'clickable': '1', 'fold_field': 'fold'}"/>
+                </header>
+
+                <sheet>
+
+                    <div class="oe_button_box" name="button_box" groups="base.group_user">
+                        <button class="oe_stat_button" type="object"
+                                name="action_view_picking" icon="fa-tasks"
+                                attrs="{'invisible': [('picking_count', '=', 0)]}">
+                            <field string="Pickings" name="picking_count" widget="statinfo"
+                                   options="{'label_field': 'label_picking'}"/>
+                        </button>
+                    </div>
+
+                    <group col="4">
+                        <field name="name"/>
+                        <field name="transport_id"
+                               domain="[('id' ,'in', transport_ids)]"
+                               widget="selection"
+                        />
+                        <field name="container_id"/>
+                        <field name="partner_id"/>
+                        <field name="company_id" invisible="1"/>
+                        <field name="transport_ids" invisible="1"/>
+                        <field name="folder_id" invisible="1"/>
+                        <field name="transport_type" invisible="1"/>
+
+                    </group>
+
+                    <notebook>
+                        <page string="Detailed Operations" name="detailed_operations_hidden">
+                            <field name="package_level_ids_details">
+                                <tree string="Stock move" editable="top" create="false" delete="false" edit="false">
+                                    <field name="product_id"/>
+                                    <field name="lot_name"
+                                           groups="stock.group_production_lot"
+                                    />
+                                    <field name="product_qty"/>
+                                    <field name="qty_done"/>
+                                    <field name="product_uom_id" options="{'no_open': True, 'no_create': True}"
+                                           attrs="{'readonly': [('product_uom_qty', '!=', 0.0)]}"
+                                           string="Unit of Measure" groups="uom.group_uom"
+                                    />
+                                    <field name="picking_id"/>
+                                    <field name="move_id" invisible="1"/>
+                                    <field name="state" invisible="1"/>
+                                    <field name="product_uom_qty" invisible="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Pickings" name="picking_ids">
+                            <group>
+                                <field name="picking_ids" widget="many2many_tags"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+
+            </form>
+        </field>
+    </record>
+
+
+
+    <!--kanban-->
+    <record id="res_container_task_kanban_view" model="ir.ui.view">
+        <field name="name">res.container.task.kanban</field>
+        <field name="model">res.container.task</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+
+            <kanban default_group_by="stage_id"
+                    class="o_kanban_container_container"
+                    sample="1"
+                    create="false"
+                    delete="false"
+                    group_create="false"
+            >
+                <field name="package_level_ids_details"/>
+                <field name="transport_id"/>
+                <field name="partner_id"/>
+                <field name="container_id"/>
+                <field name="name"/>
+                <field name="color"/>
+                <field name="stage_id" options='{"group_by_tooltip": {"name": "Description"}}'/>
+                <field name="activity_state"/>
+                <field name="activity_ids"/>
+                <progressbar field="activity_state" colors='{"planned": "success", "today": "warning", "overdue": "danger"}'/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="#{!selection_mode ? kanban_color(record.color.raw_value) : ''} oe_kanban_global_click">
+                            <div class="o_dropdown_kanban dropdown">
+                                <a class="dropdown-toggle o-no-caret btn"
+                                   role="button" data-toggle="dropdown"
+                                   data-display="static" href="#"
+                                   aria-label="Dropdown menu" title="Dropdown menu">
+                                    <span class="fa fa-ellipsis-v"/>
+                                </a>
+                            </div>
+                            <div class="oe_kanban_content">
+                                <div class="o_kanban_record_title">
+                                    <strong>
+                                        [<field name="name"/>]
+                                        <field name="container_id"/>
+                                    </strong>
+                                </div>
+                            </div>
+
+                            <div class="oe_kanban_details">
+                                <div class="o_kanban_record_title">
+                                    Folder:
+                                    <field name="folder_id"/>
+                                </div>
+                                <div class="o_kanban_record_title">
+                                    Supplier:
+                                    <field name="partner_id"/>
+                                </div>
+                            </div>
+
+                            <div class="oe_clear"/>
+                        </div>
+                    </t>
+                </templates>
+
+            </kanban>
+
+        </field>
+    </record>
+
+    <record id="view_container_task_filter" model="ir.ui.view">
+        <field name="name">res.container.task.select</field>
+        <field name="model">res.container.task</field>
+        <field name="arch" type="xml">
+
+            <search string="Search Container">
+                <field name="name"/>
+                <field name="partner_id" operator="child_of" string="Supplier"/>
+                <field name="container_id"/>
+                <field name="folder_id"/>
+                <field name="transport_id"/>
+                <field name="package_level_ids_details" string="Products"
+                       filter_domain="[('package_level_ids_details', 'ilike', self)]"/>
+                <separator/>
+                <filter name="active" string="Active" domain="[('active','=',True)]" help="Show active"/>
+                <filter name="inactive" string="Inactive" domain="[('active','=',False)]" help="Show inactive"/>
+                <group string="Group By">
+                    <filter string="Company" name="company" domain="[]" context="{'group_by':'company_id'}"
+                            groups="base.group_multi_company"/>
+                    <filter string="Folder" name="folder_id" domain="[]"
+                            context="{'group_by':'folder_id'}"/>
+                    <filter string="Transport" name="transport_id" domain="[]"
+                            context="{'group_by':'transport_id'}"/>
+                </group>
+                
+                <searchpanel>
+		      <field name="folder_id" icon="fa-retweet" enable_counters="1"/>
+		 </searchpanel>
+            </search>
+
+        </field>
+    </record>
+
+    <record id="res_container_task_boat_action" model="ir.actions.act_window">
+        <field name="name">Boats</field>
+        <field name="res_model">res.container.task</field>
+        <field name="view_mode">kanban,tree,form,activity</field>
+        <field name="context">{'transport_type':'ship'}</field>
+        <field name="domain">[('transport_type' ,'=', 'ship')]</field>
+        <field name="target">main</field>
+        <field name="search_view_id" ref="view_container_task_filter"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Folders found. Let's create one!
+            </p>
+            <p>
+                Folders regroup tasks on the same topic and each have their own dashboard.
+            </p>
+        </field>
+    </record>
+
+    <record id="res_container_task_plane_action" model="ir.actions.act_window">
+        <field name="name">Airplanes</field>
+        <field name="res_model">res.container.task</field>
+        <field name="view_mode">kanban,form,activity</field>
+        <field name="context">{'transport_type':'plane'}</field>
+        <field name="domain">[('transport_type' ,'=', 'plane')]</field>
+        <field name="target">main</field>
+        <field name="search_view_id" ref="view_container_task_filter"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Folders found. Let's create one!
+            </p>
+            <p>
+                Folders regroup tasks on the same topic and each have their own dashboard.
+            </p>
+        </field>
+    </record>
+
+    <record id="res_container_task_truck_action" model="ir.actions.act_window">
+        <field name="name">Trucks</field>
+        <field name="res_model">res.container.task</field>
+        <field name="view_mode">kanban,form,activity</field>
+        <field name="context">{'transport_type':'truck'}</field>
+        <field name="domain">[('transport_type' ,'=', 'truck')]</field>
+        <field name="target">main</field>
+        <field name="search_view_id" ref="view_container_task_filter"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Folders found. Let's create one!
+            </p>
+            <p>
+                Folders regroup tasks on the same topic and each have their own dashboard.
+            </p>
+        </field>
+    </record>
+
+    <record id="res_container_task_train_action" model="ir.actions.act_window">
+        <field name="name">Trains</field>
+        <field name="res_model">res.container.task</field>
+        <field name="view_mode">kanban,form,activity</field>
+        <field name="context">{'transport_type':'train'}</field>
+        <field name="domain">[('transport_type' ,'=', 'train')]</field>
+        <field name="target">main</field>
+        <field name="search_view_id" ref="view_container_task_filter"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Folders found. Let's create one!
+            </p>
+            <p>
+                Folders regroup tasks on the same topic and each have their own dashboard.
+            </p>
+        </field>
+    </record>
+
+</odoo>
